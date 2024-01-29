@@ -9,7 +9,14 @@ export const routes: RouteRecordRaw[] = [
   {
     path: '/about',
     name: 'About',
-    component: async () => await import('@/views/About')
+    component: async () => await import('@/views/About'),
+    children: [
+      {
+        path: '/about/children',
+        name: 'children',
+        component: async () => await import('@/components/Children')
+      }
+    ]
   },
   {
     path: '/lottie',

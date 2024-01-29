@@ -13,6 +13,9 @@
     </p>
   </div>
   <p v-else>Your browser does not support Clipboard API</p>
+  <div>
+    <router-view></router-view>
+  </div>
 </template>
 <script lang="ts">
 import { reactive, toRefs, defineComponent, ref } from 'vue'
